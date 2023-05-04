@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HomePage">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="HELLO FOODIE!"
+        android:textColor="#1C4B82"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="7dp"
+        android:text="Help us to serve you"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:layout_width="91dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/food"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/menu_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColor="#1C4B82"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:text="Menu"
+        android:padding="7dp"
+        android:background="@drawable/login_border"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_txt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_border"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/non_veg" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img1"
+                    android:src="@drawable/biryani" />
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img2"
+                    android:text="Chicken Biryani"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img2"
+                    android:text="Rs. 249/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img2"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/non_veg" />
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img3"
+                    android:src="@drawable/mutton_biryani" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img4"
+                    android:text="Mutton Biryani"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt3"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img4"
+                    android:text="Rs. 299/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt4"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img4"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="43dp">
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img6"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img5"
+                    android:src="@drawable/veg_biryani" />
+
+                <TextView
+                    android:id="@+id/txt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img6"
+                    android:text="Veg Biryani"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt5"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img6"
+                    android:text="Rs. 219/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt6"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img6"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="18dp">
+
+                <ImageView
+                    android:id="@+id/img7"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img8"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img7"
+                    android:src="@drawable/paneer_biryani" />
+
+                <TextView
+                    android:id="@+id/txt7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img8"
+                    android:text="Paneer Biryani"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt7"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img8"
+                    android:text="Rs. 239/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt8"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img8"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/img9"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img10"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img9"
+                    android:src="@drawable/paneer_tikka" />
+
+                <TextView
+                    android:id="@+id/txt9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img10"
+                    android:text="Paneer Tikka"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt9"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img10"
+                    android:text="Rs. 209/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt10"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img10"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/non_veg" />
+
+                <ImageView
+                    android:id="@+id/img12"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img11"
+                    android:src="@drawable/chicken_tandoori" />
+
+                <TextView
+                    android:id="@+id/txt11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img12"
+                    android:text="Chicken Tandoori"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt11"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img12"
+                    android:text="Rs. 229/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt12"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img12"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="42dp">
+
+                <ImageView
+                    android:id="@+id/img13"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img14"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img13"
+                    android:src="@drawable/butter_naan" />
+
+                <TextView
+                    android:id="@+id/txt13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img14"
+                    android:text="Butter Naan"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt13"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img14"
+                    android:text="Rs. 69/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt14"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img14"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/img15"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img16"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img15"
+                    android:src="@drawable/tandoori_roti" />
+
+                <TextView
+                    android:id="@+id/txt15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img16"
+                    android:text="Tandoori Roti"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt15"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img16"
+                    android:text="Rs. 19/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt16"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img16"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/img17"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/non_veg" />
+
+                <ImageView
+                    android:id="@+id/img18"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img17"
+                    android:src="@drawable/kadhai_chicken" />
+
+                <TextView
+                    android:id="@+id/txt17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img18"
+                    android:text="Kadhai Chicken"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt17"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img18"
+                    android:text="Rs. 259/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt18"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img18"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:id="@+id/img19"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/non_veg" />
+
+                <ImageView
+                    android:id="@+id/img20"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img19"
+                    android:src="@drawable/butter_chicken" />
+
+                <TextView
+                    android:id="@+id/txt19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img20"
+                    android:text="Butter Chicken"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt19"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img20"
+                    android:text="Rs. 269/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt20"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img20"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/img21"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img22"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img21"
+                    android:src="@drawable/kadhai_paneer" />
+
+                <TextView
+                    android:id="@+id/txt21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img22"
+                    android:text="Kadhai Paneer"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt21"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img22"
+                    android:text="Rs. 249/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt22"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img22"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/img23"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img24"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img23"
+                    android:src="@drawable/paneer_masala" />
+
+                <TextView
+                    android:id="@+id/txt23"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img24"
+                    android:text="Paneer Butter Masala"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt23"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img24"
+                    android:text="Rs. 269/-"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt24"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img24"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="40dp">
+
+                <ImageView
+                    android:id="@+id/img25"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img26"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img25"
+                    android:src="@drawable/water_bottle" />
+
+                <TextView
+                    android:id="@+id/txt25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img26"
+                    android:text="Water Bottle"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt25"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img26"
+                    android:text="MRP"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt26"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img26"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/login_border"
+                android:backgroundTint="#e6e6e6"
+                android:paddingLeft="5dp"
+                android:paddingRight="48dp">
+
+                <ImageView
+                    android:id="@+id/img27"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/veg" />
+
+                <ImageView
+                    android:id="@+id/img28"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img27"
+                    android:src="@drawable/soft_drinks" />
+
+                <TextView
+                    android:id="@+id/txt27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img28"
+                    android:text="Cool Drinks"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt27"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img28"
+                    android:text="MRP"
+                    android:textColor="#1C4B82"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt28"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/img28"
+                    android:backgroundTint="#1C4B82"
+                    android:text="Add"
+                    app:cornerRadius="15dp" />
+            </RelativeLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Checkout"
+                android:backgroundTint="#1C4B82"
+                app:cornerRadius="15dp"
+                android:padding="10dp"
+                android:ems="10"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="220dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/footer_menu"
+        android:background="@drawable/login_border"
+        app:backgroundTint="#1C4B82"
+        android:padding="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
